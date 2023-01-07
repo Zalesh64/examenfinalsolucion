@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock title %} | LPSUSTI </title>
+    
+</head>
+<body>
+    <ul>
+        <li><a href="/inicio">Inicio</li>
+        <li><a href="/integrantes">Integrantes</li>
+        <li><a href="/crearCurso">Crear Curso</li>
+        <li><a href="/crearDocente">Crear Docente</li>
+        <li><a href="/listarCurso">Listar Curso</li>
+        <li><a href="/listarDocente">Listar Docente</li>
+    </ul>
+
+    <div class="main">
+        {% block main %}
+        {% endblock main %}
+    </div>
+</body>
+</html>
