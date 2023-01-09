@@ -4,18 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
     <title>{% block title %}{% endblock title %} | LPSUSTI </title>
-    
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"/>
 </head>
 <body>
-    <ul>
-        <li><a href="/inicio">Inicio</li>
-        <li><a href="/integrantes">Integrantes</li>
-        <li><a href="/crearCurso">Crear Curso</li>
-        <li><a href="/crearDocente">Crear Docente</li>
-        <li><a href="/listarCurso">Listar Curso</li>
-        <li><a href="/listarDocente">Listar Docente</li>
-    </ul>
+    <div class="container">
+        <div class="header">
+            <div class="header_img">
+                <img src="{% static 'img/chuntels.png' %}"/>
+            </div>
+            <div class="header_text">
+                CHUNTELS
+            </div>
+        </div>
+        <div class="nav">
+            <ul>
+                <li><a href="/inicio">Inicio</li>
+                <li><a href="/integrantes">Integrantes</li>
+                <li><a href="/crearCurso">Crear Curso</li>
+                <li><a href="/crearDocente">Crear Docente</li>
+                <li><a href="/listarCurso">Listar Curso</li>
+                <li><a href="/listarDocente">Listar Docente</li>
+            </ul>
+        </div>
+    </div>
+    
 
     <div class="main">
         {% block main %}

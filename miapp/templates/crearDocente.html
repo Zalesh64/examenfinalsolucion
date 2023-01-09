@@ -1,5 +1,9 @@
 {% extends 'layout.html' %}
 {% block title %} CREAR DOCENTE {% endblock title %}
 {% block main %}
-    
-{% endblock %}
+    <form action="{% url 'guardardocente' %}" method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" value="Agregar Docente">
+    </form>
+{% endblock main %}
